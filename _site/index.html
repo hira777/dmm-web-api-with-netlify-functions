@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Netlify Intercom Tools</title>
+</head>
+
+<body>
+  <div>
+    <h2>Intercom Tools</h2>
+    <button type="submit" onclick="getItem()">Click me to get items</button>
+  </div>
+  <script>
+    const getItem = async () => {
+      try {
+        const response = await fetch('/.netlify/functions/itemList');
+        const resObj = await response.json();
+        console.log(resObj)
+      } catch (err) {
+        textBlock.innerHTML = 'Sorry the request failed';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "dmm-web-api-with-netlify-functions",
+  "version": "1.0.0",
+  "scripts": {
+    "lambda-serve": "netlify-lambda serve src/lambda",
+    "build": "netlify-lambda build src/lambda"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "qs": "^6.5.2"
+  },
+  "author": "soarflat",
+  "license": "MIT"
+}
